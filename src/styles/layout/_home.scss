@@ -1,0 +1,458 @@
+.stage {
+  height: 593px;
+  background-image: url("../images/main.jpg");
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  &__content {
+    padding: 146px 0 0 21px;
+  }
+
+  h4 {
+    font-family: 'Pacifico', cursive;
+    font-size: 19px;
+    font-weight: 300;
+    color: $white;
+  }
+
+  h1 {
+    font-size: 44px;
+    font-weight: 300;
+    margin-bottom: 48px;
+    color: $white;
+
+    &::after {
+      content: '';
+      display: block;
+      width: 35px;
+      height: 5px;
+      margin-top: 21px;
+      background-color: $light-brown;
+    }
+  }
+
+  p {
+    font-size: 15px;
+    line-height: 17px;
+    color: $white;
+  }
+}
+
+.for-you {
+  position: relative;
+  padding: 30px 0 47px 0;
+
+  @media (min-width: 1250px) {
+    padding-top: 93px;
+  }
+
+  &__small-card {
+    display: block;
+    width: 103px;
+    margin: 0 0 0 50px;
+
+    @include desctop {
+      margin: 0 auto;
+    }
+
+    @media (min-width: 1250px) {
+      position: absolute;
+      left: 37px;
+      top: 34px;
+    }
+
+    h4 {
+      font-family: 'Pacifico', cursive;
+      margin: 8px 0 10px 0;
+      font-weight: 300;
+      font-size: 13px;
+      line-height: 17px;
+      color: $lighter-brown;
+    }
+
+    span {
+      font-size: 12px;
+      color: $dark-brown;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 90px;
+    padding: 45px 0 0;
+
+    @include desctop {
+      flex-wrap: nowrap;
+      justify-content: start;
+      gap: 0;
+      padding: 45px 57px 0 0;
+    }
+  }
+
+  &__card {
+    position: relative;
+    padding: 0;
+
+    @include phone {
+      padding: 0 57px;
+    }
+
+    @include desctop {
+      padding: 0 97px;
+    }
+  }
+
+  &__card-img-container {
+    width: 382px;
+  }
+
+  &__card-img-desc {
+    position: absolute;
+    bottom: -30px;
+    left: 20px;
+    padding: 25px 35px 62px 30px;
+    width: 297px;
+    height: 181px;
+    color: $dark-brown;
+    background-color: $white;
+    border-radius: 10px;
+    box-shadow: 0 5px 50px rgba(44, 41, 40, 0.5);
+
+    @include desctop {
+      bottom: 97px;
+      left: 56px;
+    }
+
+    p {
+      font-size: 13px;
+      margin-bottom: 30px;
+
+      b {
+        font-size: 15px;
+      }
+    }
+  }
+
+  &__card-arrow-container {
+    display: flex;
+    gap: 6px;
+    margin-left: -10px;
+
+    .icon-arrow-left2,
+    .icon-arrow-right2 {
+      font-size: 15px;
+      color: $lighter-brown;
+      cursor: pointer;
+
+      &:hover {
+        color: $quotes-brown;
+      }
+    }
+  }
+
+  &__description {
+    max-width: 440px;
+    padding: 10px 10px 0 10px;
+
+    @include phone {
+      padding: 10px 20px 50px 16px;
+    }
+
+    h4 {
+      font-family: 'Pacifico', cursive;
+      margin: 5px 0 10px 0;
+      font-weight: 300;
+      font-size: 15px;
+      color: $lighter-brown;
+    }
+
+    h2 {
+      font-size: 34px;
+      margin-bottom: 32px;
+      color: $dark-brown;
+
+      &::after {
+        content: '';
+        display: block;
+        width: 20px;
+        height: 3px;
+        margin: 13px 0 0 -7px;
+        background-color: $light-brown;
+      }
+    }
+
+    p {
+      padding-left: 2px;
+      margin-bottom: 31px;
+      color: $dark-brown;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 20px;
+      hyphens: auto;
+    }
+
+    span {
+      position: relative;
+      display: block;
+      width: 280px;
+      margin-left: 108px;
+      font-size: 13px;
+      font-weight: 400;
+      line-height: 18px;
+      color: $dark-brown;
+
+      &::before {
+        content: '“';
+        position: absolute;
+        top: -10px;
+        left: -10px;
+        font-family: 'Raleway';
+        font-size: 50px;
+        line-height: 33.68px;
+        color: $quotes-brown;
+      }
+    }
+  }
+}
+
+.about-us {
+
+  &__title {
+    height: 282px;
+    padding-top: 55px;
+    text-align: center;
+    color: $white;
+    background-color: $quotes-brown;
+
+    h4 {
+      font-family: 'Pacifico', cursive;
+      font-weight: 300;
+      font-size: 15px;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      font-size: 35px;
+      font-weight: 300;
+    }
+  }
+
+  &__gallery {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fill, 230px);
+    gap: 40px 26px;
+    margin-top: -93px;
+
+    @include desctop {
+      grid-template-columns: repeat(4, auto);
+      gap: 20px 26px;
+    }
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    width: 230px;
+    min-height: 293px;
+    border: 1px solid $light-brown-border;
+    border-radius: 10px;
+  }
+
+  &__card-img-container {
+    height: 150px;
+
+    img {
+      border-radius: 10px 10px 0 0;
+    }
+  }
+
+  &__card-service {
+    position: relative;
+    width: min-content;
+    height: min-content;
+    font-size: 13px;
+    font-weight: 500;
+    padding: 0 5px;
+    margin-top: -31px;
+    margin-bottom: 13px;
+    margin-left: 15px;
+    background-color: $white;
+    border-radius: 3px;
+  }
+
+  &__card-name {
+    padding: 24px 0 10px 27px;
+
+    h5 {
+      margin-bottom: 6px;
+      font-size: 20px;
+      font-weight: 400;
+      color: $quotes-brown;
+    }
+
+    span {
+      font-size: 13px;
+      font-weight: 500;
+    }
+  }
+
+  &__card-link-img {
+    display: flex;
+    gap: 10px;
+    padding: 12px 0 0 33px;
+
+    .icon-xing2 {
+      font-size: 13px;
+    }
+
+    .icon-linkedin2 {
+      font-size: 15px;
+    }
+
+    .icon-xing2,
+    .icon-linkedin2 {
+      color: $quotes-brown;
+
+      &:hover {
+        color: #856d49;
+      }
+    }
+  }
+
+  &__card-link {
+    margin: auto 0 20px 30px;
+
+    a {
+      font-size: 13px;
+      font-weight: 500;
+      text-decoration: underline;
+      color: $quotes-brown;
+
+      &:hover {
+        color: #755930;
+      }
+    }
+  }
+}
+
+.history {
+  padding-top: 84px;
+
+  &__content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0 60px;
+    margin-bottom: 40px;
+
+    @include desctop {
+      justify-content: start;
+      flex-wrap: nowrap;
+      margin-bottom: 90px;
+      gap: 0;
+    }
+  }
+
+  &__description {
+    max-width: 505px;
+    padding: 10px 10px 30px 10px;
+
+    @include phone {
+      padding: 10px 20px 30px 20px;
+    }
+
+    @include desctop {
+      padding: 10px 20px 94px 79px;
+    }
+
+    h4 {
+      font-family: 'Pacifico', cursive;
+      margin: 5px 0 10px 0;
+      font-weight: 300;
+      font-size: 16px;
+      color: $lighter-brown;
+    }
+
+    h2 {
+      font-size: 34px;
+      margin-bottom: 33px;
+      color: $dark-brown;
+
+      &::after {
+        content: '';
+        display: block;
+        width: 20px;
+        height: 3px;
+        margin: 13px 0 0 -7px;
+        background-color: $light-brown;
+      }
+    }
+
+    p {
+      padding-left: 2px;
+      color: $dark-brown;
+      font-size: 15px;
+      font-weight: 400;
+      line-height: 20px;
+      hyphens: auto;
+    }
+  }
+
+  &__card {
+    position: relative;
+    padding-left: 78px;
+  }
+
+  &__card-letter {
+    position: absolute;
+    bottom: -50px;
+    left: 20px;
+    width: 200px;
+    height: 200px;
+    padding: 22px;
+    margin-bottom: 40px;
+    background-color: $lighter-brown;
+    border-radius: 10px;
+    box-shadow: 0 5px 50px rgba(44, 41, 40, 0.5);
+
+    @include phone {
+      bottom: -50px;
+      left: -20px;
+    }
+
+    @include desctop {
+      bottom: 18px;
+      left: 39px;
+    }
+  }
+
+  &__card-letter-title {
+    width: min-content;
+    height: min-content;
+    padding: 0 5px;
+    margin-bottom: 25px;
+    color: $white;
+    font-size: 13px;
+    font-weight: 500;
+    background-color: #826841;
+    border-radius: 3px;
+  }
+
+  &__card-letter-link {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 16px;
+  }
+
+  &__card-letter-desc {
+    text-align: center;
+    color: $white;
+    font-size: 18px;
+    font-weight: 300;
+  }
+}
+

@@ -1,0 +1,102 @@
+.footer {
+  background-color: $footer-backround;
+
+  &__container {
+    margin: 0 auto;
+    max-width: 1274px;
+  }
+
+  &__content {
+    display: block;
+    padding: 10px 0 0;
+
+    @media (min-width: 1250px) {
+      display: flex;
+      padding: 37px 0 32px;
+    }
+  }
+
+  &__logo {
+    width: 187px;
+    margin: 0 auto;
+
+    @media (min-width: 1250px) {
+      padding-top: 10px;
+      margin: 0 88px 0 0;
+      order: 1;
+    }
+  }
+
+  &__info {
+    display: flex;
+    gap: 60px;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    @include desctop {
+      flex-wrap: nowrap;
+    }
+
+    @media (min-width: 1250px) {
+      order: 2;
+    }
+  }
+
+  &__info-items {
+    padding: 10px;
+
+    span,
+    a {
+      display: block;
+      font-size: 14px;
+      font-weight: 400;
+      color: $white;
+    }
+
+    a {
+      &:hover {
+        color: $light-brown;
+      }
+    }
+
+    .footer__info-title {
+      margin-bottom: 18px;
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 45px;
+    }
+  }
+
+  &__info-cell {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    &--kontakt {
+      width: 135px;
+    }
+
+    &--schausonntag {
+      width: 207px;
+    }
+
+    &--offnungszeiten {
+      width: 228px;
+    }
+
+    &--rechliches {
+      width: 107px;
+    }
+  }
+
+  &__soc {
+    @extend .header__soc;
+
+    .icon-facebook,
+    .icon-pinterest2,
+    .icon-instagram {
+      font-weight: 500;
+      color: $white;
+    }
+  }
+}
